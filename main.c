@@ -3,18 +3,24 @@
 #define SIZE 5
 
 int main(){
- int grade[SIZE];
- int i,aver;
- int sum=0;
+ int grade[SIZE]={1,2,3,4,5};
+ int score[SIZE]={1,2,5,4,5};
+ int i;
 
-  for (i=0;i<SIZE;i++){
-    printf("input students's grade\n");
- scanf("%d",&grade[i]);
- sum += grade[i];
- }
 
- aver = sum/SIZE;
- printf("average is %d\n",aver);
+if(grade==score){//3-1 실습
+    printf("same\n");
+} 
+else{
+    printf("differ\n");
+}
+
+for(i=0;i<SIZE;i++){//3-2 실습
+    if (grade[i] != score[i]){
+        printf("index %i differ\n",i);
+    }
+}
+
  
  return 0;
 
