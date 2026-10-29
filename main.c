@@ -2,26 +2,31 @@
 #include <stdlib.h>
 #define SIZE 5
 
+
+void square_array(int a[],int size);
+void print_array(int a[], int size);
+
 int main(){
- int grade[SIZE]={1,2,3,4,5};
- int score[SIZE]={1,2,5,4,5};
- int i;
+    int list[SIZE] = {1,2,3,4};
 
+    print_array(list,SIZE);
+    square_array(list, SIZE);
+    print_array(list,SIZE);
 
-if(grade==score){//3-1 실습
-    printf("same\n");
-} 
-else{
-    printf("differ\n");
+    return 0;
 }
 
-for(i=0;i<SIZE;i++){//3-2 실습
-    if (grade[i] != score[i]){
-        printf("index %i differ\n",i);
-    }
+void square_array(int a[],int size){
+    int i;
+    for(i=0;i<size;i++)
+    a[i]=a[i]*a[i];
 }
 
- 
- return 0;
+void print_array(int a[],int size){
+    int i;
+    for(i=0;i<size;i++)
+    printf("%3d",a[i]);
+
+    printf("\n");
 
 }
